@@ -1,0 +1,222 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  padding: 1rem;
+  display: flex;
+  position: absolute;
+  top: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #2e272a;
+  background-image: url(/Projects/Photos/cristiano-ronaldo-4757x3171-9685.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.mainBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  height: 70%;
+  width: 70%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.left {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  /* overflow: hidden; */
+}
+.left img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.left .loveImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform ease 0.5s;
+}
+.left .loveImg:hover {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+.right {
+  width: 50%;
+  background-color: #010101;
+  color: #7d7d7d;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 0.5rem 0.5rem;
+}
+.right h1 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  margin-top: 0.5rem;
+}
+.right h2 {
+  font-size: clamp(1rem, 2vw, 1rem);
+  margin-top: 0.8rem;
+}
+.right .stats {
+  margin-top: 2%;
+  align-self: flex-start;
+}
+.right .stats ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.right .stats ul li {
+  font-size: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+.right .stats ul li .icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 4px;
+}
+.right .stats ul li .value {
+  margin-left: 1rem;
+}
+.right .teams {
+  margin-top: 1rem;
+  width: 100%;
+}
+.right .teams ul {
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  background-color: #a78c8c;
+  list-style: none;
+  gap: 1rem;
+}
+.right .teams .team {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  color: #010101;
+  gap: 0.5rem;
+}
+.right .socialStats {
+  width: 100%;
+  margin-top: 1rem;
+}
+.right .socialStats ul {
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  background-color: #a78c8c;
+  list-style: none;
+  gap: 1rem;
+}
+.right .socialStats li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #010101;
+  gap: 0.5rem;
+}
+.right .socialStats li img {
+  width: 40px; /* 👈 force same size */
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+.right .btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+.right .btn button {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #22c1c3, #3a7bd5);
+  color: white;
+  transition: all 0.25s ease;
+  /* subtle base shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.right .btn button:hover {
+  transform: translateY(-5px) scale(1.02); /* 👈 lift effect */
+  box-shadow: 0 10px 20px rgba(88, 38, 38, 0.5);
+}
+.right .btn button:active {
+  transform: translateY(-2px) scale(0.98); /* 👈 press feel */
+}
+.right .btn .unfolloBtn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+  .left {
+    height: 250px;
+  }
+  .left img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+  }
+}/*# sourceMappingURL=index.css.map */
