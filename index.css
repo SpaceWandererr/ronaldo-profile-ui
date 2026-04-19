@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
   width: 100vw;
   background-color: #2e272a;
-  background-image: url(./cristiano-ronaldo.jpg);
+  background-image: url("./cristiano-ronaldo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
